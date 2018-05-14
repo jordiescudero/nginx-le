@@ -3,7 +3,7 @@ services:
 
     nginx:
         build: .
-        image: umputun/nginx-le:latest
+#        image: umputun/nginx-le:latest
         hostname: nginx
         restart: always
         container_name: nginx
@@ -23,10 +23,10 @@ services:
             - "443:443"
 
         environment:
-            - TZ=America/Chicago
+            - TZ=Europe/Paris
             - LETSENCRYPT=true
-            - LE_EMAIL=name@example.com
-            - LE_FQDN=www.example.com
+            - LE_EMAIL=jordi.escudero@worldline.com
+            - LE_FQDN=www.wlilab.eu,bloomen.wlilab.eu
             #- SSL_CERT=le-crt.pem
             #- SSL_KEY=le-key.pem
             #- SSL_CHAIN_CERT=le-chain-crt.pem
